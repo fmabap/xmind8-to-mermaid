@@ -29,6 +29,10 @@ export class jsonToflowchart {
         return topic["@_id"];
     }
     private getIdWithTitle(topic: XMindTopic): string {
+        if (topic == undefined) {
+            console.log("undefined topic");
+            return " ";
+        }
         this.getId(topic);
         let nodeText = " ";
         if (topic.title != undefined) {
@@ -76,13 +80,27 @@ export class jsonToflowchart {
         }
 
         const getC = getCon.bind(this);
-        if (Array.isArray(topic.children.topics.topic)) {
-            topic.children.topics.topic.forEach(childTopic => {
-                getC(childTopic);
+        if (Array.isArray(topic.children.topics)) {
+            topic.children.topics.forEach(topic => {
+                if (Array.isArray(topic.topic)) {
+                    topic.topic.forEach(childTopic => {
+                        getC(childTopic);
+                    });
+                }
+                else {
+                    getC(topic.topic);
+                }
             });
         }
         else {
-            getC(topic.children.topics.topic);
+            if (Array.isArray(topic.children.topics.topic)) {
+                topic.children.topics.topic.forEach(childTopic => {
+                    getC(childTopic);
+                });
+            }
+            else {
+                getC(topic.children.topics.topic);
+            }
         }
         return conString;
     }
