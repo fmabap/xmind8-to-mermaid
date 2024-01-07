@@ -1,6 +1,6 @@
 # XMind 8 to Mermaid flowchart
 
-This command line based program converts XMind 8 files to a Mermaid flowchart.
+This command line based program converts a XMind 8 file to a Mermaid flowchart.
 
 It takes only the text of the shapes for the conversion.
 
@@ -22,7 +22,7 @@ A XMind file is just a renamed ZIP-file. It contains among others the file conte
 
 ## Execution of the program
 
-You can run the program after the successful installation with the command ```npm run conv``` followed from the path to the XMind-file and an optional flowchart format option from the main folder of the program.
+You can run the program after the successful installation with the command ```npm run conv``` followed by the path to the XMind-file and an optional flowchart format option from the main folder of the program.
 
 The Markdown-file will be created in the folder of the XMind-file with the name of the XMind-file.
 
