@@ -7,7 +7,8 @@
     "lint": "eslint ./src --ext .js,.ts",
     "build": "tsc && npm run lint",
     "start": "npm run build && node dist/index.js",
-    "conv": "node dist/index.js"
+    "conv": "node dist/index.js",
+    "debug": "node --inspect-brk dist/index.js"
   },
   "keywords": [],
   "license": "MIT",
