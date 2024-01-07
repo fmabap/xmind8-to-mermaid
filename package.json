@@ -1,7 +1,7 @@
 {
   "name": "xmind8-to-mermaid",
   "version": "1.0.0",
-  "description": "Convert XMind 8 to Mermaid",
+  "description": "The program converts XMind 8 files to Mermaid",
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint ./src --ext .js,.ts",
@@ -10,7 +10,6 @@
     "conv": "node dist/index.js"
   },
   "keywords": [],
-  "author": "Frank Müller",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.10.4",
