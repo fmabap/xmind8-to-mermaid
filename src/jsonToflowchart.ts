@@ -30,10 +30,19 @@ export class jsonToflowchart {
     }
     private getIdWithTitle(topic: XMindTopic): string {
         this.getId(topic);
-        if (topic.title == undefined) {
-            topic.title = "";
+        let nodeText = " ";
+        if (topic.title != undefined) {
+            if (topic.title["#text"] != undefined) {
+                nodeText = topic.title["#text"]
+            }
+            else {
+                nodeText = topic.title as string;
+            }
         }
-        const result = `${topic["@_id"]}["${topic.title}"]`;
+        if (nodeText == "") {
+            nodeText = " ";
+        }
+        const result = `${topic["@_id"]}["${nodeText}"]`;
         return result;
     }
     private getConnections(topic: XMindTopic): string {

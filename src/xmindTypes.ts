@@ -21,7 +21,7 @@ export interface XMindXmapContent {
     "@_version"?: string
 }
 export interface XMindTopic {
-    title?: string,
+    title?: string | XMindTopicTitle,
     "@_id"?: string,
     "@_modified-by"?: string,
     "@_timestamp"?: string,
@@ -38,5 +38,7 @@ export interface XMindTopic {
             topic?: XMindTopic[]
         }
     }
-
+}
+export interface XMindTopicTitle {
+    "#text"?: string
 }
