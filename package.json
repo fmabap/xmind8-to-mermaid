@@ -13,14 +13,16 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.14.13",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "eslint": "^8.57.0",
-    "typescript": "^5.5.4"
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^22.19.7",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.2",
+    "globals": "^15.14.0",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "fast-xml-parser": "^4.4.1",
+    "fast-xml-parser": "^5.3.4",
     "jszip": "^3.10.1"
   }
 }
